@@ -49,6 +49,12 @@ socket.broadcast.emit('newMessage', generateMessage('Admin', 'New user Joined'))
 	// 	});
 	// });
 
+	socket.on('testMessage', (message, callback) => {
+		console.log('TEst message', message);
+		io.emit('newMessage', generateMessage(message.from, message.text));
+		callback('What the hell is this?');
+	});
+
 	socket.on('disconnect', () => {
 		console.log('New user disconnected');
 	})
