@@ -7,10 +7,11 @@ socket.on('connect', () => {
 // 	from: "sameer@example.com",
 // 	text:'for you'
 // });
-	socket.emit('createMessage', {
-		from:'heroes@yahoo.com',
-		text: 'you are my hero'
-	})
+
+// 	socket.emit('createMessage', {
+// 		from:'heroes@yahoo.com',
+// 		text: 'you are my hero'
+// 	})
 });
 
 socket.on('disconnect', () => {
